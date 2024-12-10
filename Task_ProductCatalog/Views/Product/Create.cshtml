@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductCatalog.Application.DTOs.ProductDto
+
+<h2>Create Product</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" required />
+    </div>
+
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input type="datetime-local" class="form-control" id="StartDate" name="StartDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Duration">Duration</label>
+        <input type="number" class="form-control" id="Duration" name="Duration" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="number" class="form-control" id="Price" name="Price" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Image">Image</label>
+        <input type="file" class="form-control" id="Image" name="Image" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
